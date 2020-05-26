@@ -6,8 +6,8 @@ var surnameList = ['Bianchi', 'Rossi', 'Duzioni', 'Balsano', 'Verdi']
 var surnameInput = '';
 
 // Creo un ciclo while che mi continui a chiedere di inserire un cognome
-// fino a che non ne inserisco uno
-while (surnameInput === '') {
+// fino a che non inserisco una stringa
+while (!isNaN(surnameInput === '')) {
   surnameInput = prompt('Inserisci il tuo cognome');
 
   // Funzione per inserire un elemento dentro ad un array
@@ -23,3 +23,7 @@ alert('Lista ordinata alfabeticamente: ' + surnameList);
 // all'interno di un array, l'indice di un elemento,
 // poi aggiungo un +1 per la posizione "umanamente parlando"
 alert('Il cognome inserito è in ' + (surnameList.indexOf(surnameInput) + 1) + 'a posizione');
+
+// do {
+//   surnameInput = prompt('Inserisci il tuo cognome');
+// } while (surnameInput === '');

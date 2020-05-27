@@ -3,12 +3,12 @@
 var surnameList = ['Bianchi', 'Rossi', 'Duzioni', 'Balsano', 'Verdi']
 
 // Setto come "vuota" la variabile del cognome dato in input
-var surnameInput = '';
+var surnameInput = prompt('Inserisci il tuo cognome');
 
 // Creo un ciclo while che mi continui a chiedere di inserire un cognome
 // fino a che non inserisco una stringa
 while (!isNaN(surnameInput) || surnameInput === '') {
-  surnameInput = prompt('Inserisci il tuo cognome')
+  surnameInput = prompt('Dato inserito non valido')
 };
 
 // Creo un if di flag

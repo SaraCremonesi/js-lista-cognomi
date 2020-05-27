@@ -7,23 +7,22 @@ var surnameInput = '';
 
 // Creo un ciclo while che mi continui a chiedere di inserire un cognome
 // fino a che non inserisco una stringa
-while (!isNaN(surnameInput === '')) {
-  surnameInput = prompt('Inserisci il tuo cognome');
+while (!isNaN(surnameInput) || surnameInput === '') {
+  surnameInput = prompt('Inserisci il tuo cognome')
+};
 
+// Creo un if di flag
+if ((surnameInput != '') && (isNaN(surnameInput))) {
   // Funzione per inserire un elemento dentro ad un array
   surnameList.push(surnameInput);
 
   // Funzione per ordinare alfabeticamente un array
   surnameList.sort();
-}
 
-alert('Lista ordinata alfabeticamente: ' + surnameList);
+  alert('Lista ordinata alfabeticamente: ' + surnameList);
 
-// .indexOf() è una funzione che mi permette di trovare,
-// all'interno di un array, l'indice di un elemento,
-// poi aggiungo un +1 per la posizione "umanamente parlando"
-alert('Il cognome inserito è in ' + (surnameList.indexOf(surnameInput) + 1) + 'a posizione');
-
-// do {
-//   surnameInput = prompt('Inserisci il tuo cognome');
-// } while (surnameInput === '');
+  // .indexOf() è una funzione che mi permette di trovare,
+  // all'interno di un array, l'indice di un elemento,
+  // poi aggiungo un +1 per la posizione "umanamente parlando"
+  alert('Il cognome inserito è in ' + (surnameList.indexOf(surnameInput) + 1) + 'a posizione');
+};
